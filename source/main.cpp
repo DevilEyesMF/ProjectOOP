@@ -1,17 +1,17 @@
 #include <iostream>
 #include <string>
 
-#include "classes/Case.h"
-#include "classes/Company.h"
-#include "classes/Computershop.h"
-#include "classes/CPU.h"
-#include "classes/Customer.h"
-#include "classes/GPU.h"
-#include "classes/HardDrive.h"
-#include "classes/Invoice.h"
-#include "classes/Memory.h"
-#include "classes/Motherboard.h"
-#include "classes/PowerSupply.h"
+#include "../classes/Case.h"
+#include "../classes/Company.h"
+#include "../classes/Computershop.h"
+#include "../classes/CPU.h"
+#include "../classes/Customer.h"
+#include "../classes/GPU.h"
+#include "../classes/HardDrive.h"
+#include "../classes/Invoice.h"
+#include "../classes/Memory.h"
+#include "../classes/Motherboard.h"
+#include "../classes/PowerSupply.h"
 
 using namespace std;
 
