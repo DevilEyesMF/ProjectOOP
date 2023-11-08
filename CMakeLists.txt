@@ -3,16 +3,16 @@ project(ProjectOOP)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(ProjectOOP source/main.cpp
-        classes/Case.cpp
-        classes/Company.cpp
-        classes/Component.cpp
-        classes/Computershop.cpp
-        classes/CPU.cpp
-        classes/Customer.cpp
-        classes/GPU.cpp
-        classes/HardDrive.cpp
-        classes/Invoice.cpp
-        classes/Memory.cpp
-        classes/Motherboard.cpp
-        classes/PowerSupply.cpp)
+add_executable(ProjectOOP src/main.cpp
+        src/Case.cpp
+        src/Company.cpp
+        src/Component.cpp
+        src/Computershop.cpp
+        src/CPU.cpp
+        src/Customer.cpp
+        src/GPU.cpp
+        src/HardDrive.cpp
+        src/Invoice.cpp
+        src/Memory.cpp
+        src/Motherboard.cpp
+        src/PowerSupply.cpp)

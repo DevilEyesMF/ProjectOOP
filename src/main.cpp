@@ -1,32 +1,38 @@
 #include <iostream>
 #include <string>
 
-#include "../classes/Case.h"
-#include "../classes/Company.h"
-#include "../classes/Computershop.h"
-#include "../classes/CPU.h"
-#include "../classes/Customer.h"
-#include "../classes/GPU.h"
-#include "../classes/HardDrive.h"
-#include "../classes/Invoice.h"
-#include "../classes/Memory.h"
-#include "../classes/Motherboard.h"
-#include "../classes/PowerSupply.h"
+#include "../include/Case.h"
+#include "../include/Company.h"
+#include "../include/Computershop.h"
+#include "../include/CPU.h"
+#include "../include/Customer.h"
+#include "../include/GPU.h"
+#include "../include/HardDrive.h"
+#include "../include/Invoice.h"
+#include "../include/Memory.h"
+#include "../include/Motherboard.h"
+#include "../include/PowerSupply.h"
 
 using namespace std;
 
 int main()
 {
-    Computershop computershop = Computershop("Deze noten", "uw mamaaaaa");
+    string shopName = "Deze noten";
+    string shopAddress = "myStreet";
+    string placeholder = "placeholder";
 
-    computershop.addComponent(new CPU("AMD", "3700X", 329.00, 0, 0, 3600, 8, "AM4"));
-    computershop.addCustomer(new Customer("Lander Van laer", "https://landervanlaer.com"));
+    const string filename = "../test.bin";
+
+    Computershop computershop = Computershop(shopName, shopAddress);
+
+    computershop.addComponent(new CPU(placeholder, placeholder, 329.00, 0, false, 3600, 8, placeholder));
+    computershop.addCustomer(new Customer(placeholder, placeholder));
     computershop.addCustomer(
-            new Company("Thomas More", "Jan Pieter de Nayerlaan 5, 2860 Sint-Katelijne-Waver", 21, 0, 0));
+            new Company(placeholder, placeholder, 21, 0, 0));
 
-    for (Component *co: computershop.getComponents())
+    for (Component* co : computershop.getComponents())
     {
-        if (CPU *c = dynamic_cast<CPU *>(co))
+        if (CPU* c = dynamic_cast<CPU*>(co))
         {
             cout << "Type: " << c->getType() << "\n"
                  << "Manufacturer: " << c->getManufacturer() << "\n"
@@ -40,13 +46,13 @@ int main()
         }
     }
 
-    for (Customer *cu: computershop.getCustomers())
+    for (Customer* cu : computershop.getCustomers())
     {
         cout << (cu->getCompany() ? "Business" : "Private individual") << "\n"
              << "Name: " << cu->getName() << "\n"
              << "Address: " << cu->getAddress() << "\n";
 
-        if (Company *c = dynamic_cast<Company *>(cu))
+        if (Company* c = dynamic_cast<Company*>(cu))
         {
             cout << "VAT: " << c->getVat() << "\n"
                  << "Reduction: " << c->getReduction() << "\n"
@@ -54,7 +60,7 @@ int main()
         }
     }
 
-    computershop.saveToFile("test.bin");
+    computershop.saveToFile(filename);
 
     return 0;
 }
