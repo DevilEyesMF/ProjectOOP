@@ -19,6 +19,7 @@ public:
     void setCores(int);
     void setSocket(std::string&);
 
+protected:
     /* methods */
     void serialize(std::ofstream&) const override;
 

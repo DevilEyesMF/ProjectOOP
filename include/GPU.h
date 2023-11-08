@@ -16,6 +16,10 @@ public:
     void setPower(int);
     void setBusspeed(int);
 
+protected:
+    /* methods */
+    void serialize(std::ofstream& filestream) const override;
+
 private:
     /* attributes */
     int power;

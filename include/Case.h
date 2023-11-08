@@ -19,6 +19,9 @@ public:
     void setMotherboardSize(std::string&);
     void setMaterial(std::string&);
 
+protected:
+    void serialize(std::ofstream& filestream) const override;
+
 private:
     /* attributes */
     std::string color;
