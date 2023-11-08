@@ -18,7 +18,7 @@ public:
 
 protected:
     /* methods */
-    void serialize(std::ofstream& filestream) const override;
+    void serialize(std::ofstream&) const override;
 
 private:
     /* attributes */

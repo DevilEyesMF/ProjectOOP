@@ -19,6 +19,10 @@ public:
     void setSize(int);
     void setSlot(std::string&);
 
+protected:
+    /* methods */
+    void serialize(std::ofstream&) const override;
+
 private:
     /* attributes */
     int speed;

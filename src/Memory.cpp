@@ -28,3 +28,20 @@ void Memory::setSpeed(int speed)
 {
     this->speed = speed;
 }
+
+/* methods */
+void Memory::serialize(std::ofstream& filestream) const
+{
+    /* write type */
+    Component::Type type = this->getType(); // stores the type of Component
+    filestream.write(reinterpret_cast<const char*>(&type), sizeof(Component::Type));
+
+    /* send general Component data */
+    Component::serialize(filestream);
+
+    /* write size */
+    filestream.write(reinterpret_cast<const char*>(&this->size), sizeof(this->size));
+
+    /* write speed */
+    filestream.write(reinterpret_cast<const char*>(&this->speed), sizeof(this->speed));
+}

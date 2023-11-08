@@ -17,6 +17,9 @@ public:
     void setPower(int);
     void setCertification(std::string&);
 
+protected:
+    void serialize(std::ofstream&) const override;
+
 private:
     /* attributes */
     int power;

@@ -19,6 +19,10 @@ public:
     void setMemorySlots(int);
     void setSize(std::string&);
 
+protected:
+    /* methods */
+    void serialize(std::ofstream&) const override;
+
 private:
     /* attributes */
     std::string socket;

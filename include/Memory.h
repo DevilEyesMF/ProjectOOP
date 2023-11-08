@@ -16,6 +16,10 @@ public:
     void setSize(int);
     void setSpeed(int);
 
+protected:
+    /* methods */
+    void serialize(std::ofstream&) const override;
+
 private:
     /* attributes */
     int size;
