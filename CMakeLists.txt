@@ -15,4 +15,5 @@ add_executable(ProjectOOP src/main.cpp
         src/Invoice.cpp
         src/Memory.cpp
         src/Motherboard.cpp
-        src/PowerSupply.cpp)
+        src/PowerSupply.cpp
+        include/User.h)

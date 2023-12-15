@@ -40,7 +40,7 @@ public:
 
     /* methods */
     virtual void serialize(std::ofstream&) const;
-    // virtual void deserialize(std::ifstream&) const;
+    virtual void deserialize(std::ifstream&) const;
 
 protected:
     /* attributes */

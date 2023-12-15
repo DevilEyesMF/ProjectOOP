@@ -68,3 +68,8 @@ void Case::serialize(std::ofstream& filestream) const
     filestream.write(reinterpret_cast<const char*>(&size), sizeof(size)); // write the length of the string
     filestream.write(reinterpret_cast<const char*>(this->material.c_str()), size); // write the string itself
 }
+
+void deserialize(std::ifstream& filestream) const
+{
+
+}

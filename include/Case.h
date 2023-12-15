@@ -21,6 +21,7 @@ public:
 
 protected:
     void serialize(std::ofstream& filestream) const override;
+    void deserialize(std::ifstream& filestream) const override;
 
 private:
     /* attributes */

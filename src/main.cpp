@@ -17,7 +17,7 @@ using namespace std;
 
 int main()
 {
-    string shopName = "Deze noten";
+    string shopName = "My shop";
     string shopAddress = "myStreet";
     string placeholder = "placeholder";
 
